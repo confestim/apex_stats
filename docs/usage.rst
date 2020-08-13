@@ -11,8 +11,8 @@ recentlyPlayed(username/id, userplatform (optional) )
 
 .. code-block:: python
   :linenos:
-   apexStats = apex.recentlyPlayed(your-tracker.gg-api-key)  
-   apexPrint = apexStats.recentlyPlayed(username/id)  
-   print(apexPrint)  
-   >>> ['your', 'last', 'played', 'characters']  
+    apexStats = apex.recentlyPlayed(your-tracker.gg-api-key)  
+    apexPrint = apexStats.recentlyPlayed(username/id)  
+    print(apexPrint)  
+    >>> ['your', 'last', 'played', 'characters']  
 
