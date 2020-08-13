@@ -1,6 +1,6 @@
 # apex_stats
 an api-wrapper for https://apex.tracker.gg/
-# installation:  
+## installation:  
 `pip install apex-stats`  
-# apex-stats.rtfd.io  
-apex-stats.rtfd.io
+## [Documentation](apex-stats.rtfd.io)  
+
