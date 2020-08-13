@@ -11,10 +11,10 @@ recentlyPlayed(username/id, userplatform (optional) )
 
 ```
 apexStats = apex.recentlyPlayed(your-tracker.gg-api-key)  
-```
+``` ```
 apexPrint = apexStats.recentlyPlayed(username/id)  
-```
+``` ```
 print(apexPrint)  
-```
+``` ```
 >>> ['your', 'last', 'played', 'characters']  
 ```
