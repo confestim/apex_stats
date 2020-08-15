@@ -12,6 +12,6 @@ Welcome to apex_stats's documentation!
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* :ref:`info`
+* :ref:`usage`
+* :ref:`license`
