@@ -1,15 +1,15 @@
 Welcome to apex_stats's documentation!
 ======================================
-Y a y
+| Y a y
 
 Contents
 ==================
 
-* :ref:`Usage`
+* Usage_
 
-* :ref:`Info`
+* Info_
 
-* :ref:`License`
+* License_
 
 |
 |
