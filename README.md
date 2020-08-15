@@ -4,12 +4,12 @@
 ![PyPI](https://img.shields.io/pypi/v/apex-stats?style=for-the-badge)
 
 an api-wrapper for https://apex.tracker.gg/
-## Installation:  
-`pip install apex-stats` 
-or  
+## Installation:    
+`pip install apex-stats`   
+or    
 `download the release and import apex_stats`  
-or  
-
+or    
+ 
 ```
 git clone https://github.com/yamozha/apex_stats
 cd apex_stats
