@@ -1,18 +1,58 @@
-Usage
-=====
+**Usage**
+=========
+| Usage for the library apex_stats
 
-recentlyPlayed(username/id, userplatform (optional) )
+| Before using this library make sure you use 
+
+.. code-block :: python
+
+    import apex_stats
+
+not
+
+.. code-block :: python
+
+    import apex-stats
+
+*recentlyPlayed(username/id, userplatform)*
 #####################################################
 
-| Shows you your recently played legends.  
+| Returns 5 of your recently played legends as a list.
 
-| userplatform is, by default, origin, but you can choose from 'origin', 'xbl', 'psn'.    
-| username/id is - the desired username to be checked.  
+| **username/id** - the desired username to get data from.
+
+| **userplatform** -  default=origin, choose from 'origin', 'xbl', 'psn'.
 
 .. code-block:: python
-  :linenos:
-    apexStats = apex.recentlyPlayed(your-tracker.gg-api-key)  
-    apexPrint = apexStats.recentlyPlayed(username/id)  
-    print(apexPrint)  
-    >>> ['your', 'last', 'played', 'characters']  
+   :linenos:
 
+
+    apexInstance = apex.recentlyPlayed(your-tracker.gg-api-key)
+    apexStats = apexInstance.recentlyPlayed("testuser")
+
+    print(apexStats)
+
+    >>> ['your', 'last', 'played', 'characters']
+
+
+*matchHistory(username/id, gamecount, userplatfom)*
+#####################################################
+
+| Returns data from x number of games.
+
+| **username/id** - the desired username to get data from.
+
+| **userplatform** -  default=origin, choose from 'origin', 'xbl', 'psn'.
+
+| **gamecount** - number of games you want data from (counted from your last game)
+
+.. code-block:: python
+   :linenos:
+
+    apexInstance = apex.recentlyPlayed(your-tracker.gg-api-key)
+    apexHistory = apexInstance.matchHistory("testuser", 2)
+
+    print(apexStats)
+
+    >>> [{game1:legend, game1:kills, game1:duration},
+    {game2:legend, game2:kills, game2:duration}]

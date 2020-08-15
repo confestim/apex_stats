@@ -3,7 +3,8 @@ Welcome to apex_stats's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption:
+   Info
    License
    Usage
 
