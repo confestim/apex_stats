@@ -5,6 +5,15 @@
 
 an api-wrapper for https://apex.tracker.gg/
 ## Installation:  
-`pip install apex-stats`  
+`pip install apex-stats` 
+or
+`download the release and import apex_stats`
+or
+```
+git clone https://github.com/yamozha/apex_stats
+cd apex_stats
+python setup.py install
+````
+
 ## *[Click me for documentation](https://apex-stats.rtfd.io)*  
 
