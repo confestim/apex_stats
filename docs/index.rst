@@ -1,4 +1,4 @@
-Welcome to apex_stats's documentation!
+apex_stats's documentation!
 ======================================
 | Y a y
 
@@ -78,8 +78,6 @@ not
 
 **FAQ**
 ========
-
-wat
 
 Who is behind this
 ##################
