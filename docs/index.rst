@@ -7,15 +7,10 @@ Contents
 
 * Usage_
 
-* Info_
+* FAQ_
 
 * License_
 
-|
-|
-|
-|
-|
 
 .. _Usage:
 
@@ -78,13 +73,10 @@ not
     >>> [{game1:legend, game1:kills, game1:duration},
     {game2:legend, game2:kills, game2:duration}]
 
-|
-|
-|
 
-.. _Info:
+.. _FAQ:
 
-**Info**
+**FAQ**
 ========
 
 wat
@@ -108,9 +100,6 @@ I know. Go back_?
 
 .. _back: https://google.com
 
-|
-|
-|
 
 .. _License:
 
