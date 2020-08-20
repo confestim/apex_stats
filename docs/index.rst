@@ -22,7 +22,7 @@ Contents
 
 .. code-block :: python
 
-    import apex_stats
+    import apex_stats as apex
 
 not
 
@@ -30,7 +30,7 @@ not
 
     import apex-stats
 
-*recentlyPlayed(username/id, userplatform)*
+*recentlyPlayed(us-ername/id, userplatform)*
 #####################################################
 
 | Returns 5 of your recently played legends as a list.
@@ -43,7 +43,7 @@ not
    :linenos:
 
 
-    apexInstance = apex.recentlyPlayed(your-tracker.gg-api-key)
+    apexInstance = apex.singleStats(your-tracker.gg-api-key)
     apexStats = apexInstance.recentlyPlayed("testuser")
 
     print(apexStats)
@@ -65,7 +65,7 @@ not
 .. code-block:: python
    :linenos:
 
-    apexInstance = apex.recentlyPlayed(your-tracker.gg-api-key)
+    apexInstance = apex.singleStats(your-tracker.gg-api-key)
     apexHistory = apexInstance.matchHistory("testuser", 2)
 
     print(apexStats)
