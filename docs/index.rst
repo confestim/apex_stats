@@ -18,19 +18,28 @@ Contents
 ==========
 | Usage for the library apex_stats
 
-| Before using this library make sure you use 
+| Before using this library make sure you don't import the whole library, rather the part you need. E.g. let's say I need full user info, therefore I do this:
 
-.. code-block :: python
+.. code-block:: python
+   :linenos:
 
-    import apex_stats as apex
+    from apex_stats import User
+    user = User("api-key", "username")
+    ....
 
-not
+*Stats("tracker.gg-api-key")*
+#####################################################
+|  Gets specific information about a user(W.I.P. at the moment as I will add more functions at a later stage)
 
-.. code-block :: python
+| For the sake of the docs we will assign a variable to the initiation of the class like so:
 
-    import apex-stats
+.. code-block:: python
+    :linenos:
 
-*recentlyPlayed(us-ername/id, userplatform)*
+    apexInstance = apex.Stats("your-tracker.gg-api-key")
+
+  
+recentlyPlayed(username/id, userplatform)
 #####################################################
 
 | Returns 5 of your recently played legends as a list.
@@ -43,7 +52,6 @@ not
    :linenos:
 
 
-    apexInstance = apex.singleStats(your-tracker.gg-api-key)
     apexStats = apexInstance.recentlyPlayed("testuser")
 
     print(apexStats)
@@ -65,7 +73,6 @@ not
 .. code-block:: python
    :linenos:
 
-    apexInstance = apex.singleStats(your-tracker.gg-api-key)
     apexHistory = apexInstance.matchHistory("testuser", 2)
 
     print(apexStats)
@@ -73,6 +80,47 @@ not
     >>> [{game1:legend, game1:kills, game1:duration},
     {game2:legend, game2:kills, game2:duration}]
 
+*User("tracker.gg-api-key", "username-to-look-up", "platform(optional)"*
+#####################################################
+| Dumps jsons with lots of information about given user.
+
+| **username-to-look-up** - the desired username to get data from.
+
+| **platform** -  default=origin, choose from 'origin', 'xbl', 'psn'.
+
+| For the sake of the example, let's assign a variable:
+
+.. code-block:: python
+    :linenos:
+    apexInstance = apex.User("tracker.gg-api-key","testuser")
+
+games
+#####################################################
+
+| Returns around 3 of given user's matches
+
+.. code-block:: python
+    :linenos:
+
+    apexStats = apexInstance.games
+
+    print(apexStats)
+
+    >>> {"info about":"matches"}
+
+stats
+#####################################################
+
+| Returns user information like rank, kills, damage, etc
+
+.. code-block:: python
+    :linenos:
+
+    apexStats = apexInstance.stats
+
+    print(apexStats)
+
+    >>> {"info about":"user", "rank":"gold"}
 
 .. _FAQ:
 

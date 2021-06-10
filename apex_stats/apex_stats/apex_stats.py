@@ -1,7 +1,9 @@
 import requests
 import datetime
 
-class singleStats():
+from requests import api
+
+class Stats:
 
     def __init__(self, apikey=None):
         if not apikey:
@@ -37,7 +39,8 @@ class singleStats():
 
     def matchHistory(self, userId : str, gameCount : int, userPlatform="origin"):
 
-        primReq = requests.get(f"https://public-api.tracker.gg/v2/apex/standard/profile/{userPlatform}/{userId}/sessions", headers={"TRN-Api-Key":f"{self.apiKey}"})
+        primReq = requests.get(f"https://public-api.tracker.gg/v2/apex/standard/profile/{userPlatform}/{userId}/sessions",
+                                                                                headers={"TRN-Api-Key":f"{self.apiKey}"})
         segReq = primReq.json()
         if str(primReq) == "<Response [200]>":
 
@@ -52,3 +55,17 @@ class singleStats():
             return data
         else:
             raise Exception("This account doesn't exist")
+    
+class User:
+    def __init__(self, apiKey=None, username=None, user_platform="origin"):
+        if not username:
+            raise ValueError("Please provide a username!")
+        elif not apiKey:
+            raise ValueError("Please provide api key!")s
+        else:
+            primReq = requests.get(f"https://public-api.tracker.gg/v2/apex/standard/profile/{user_platform}/{username}/sessions", headers={"TRN-Api-Key":f"{apiKey}"})
+            segReq = primReq.json()
+            segReq = segReq["data"]["items"][0]
+            
+            self.games = segReq["matches"]
+            self.stats = segReq["stats"]
