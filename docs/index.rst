@@ -2,6 +2,8 @@ apex_stats's documentation!
 ======================================
 | Y a y
 
+-----------------------
+
 Contents
 ==================
 
@@ -11,8 +13,10 @@ Contents
 
 * License_
 
+-----------------------
 
 .. _Usage:
+
 
 **Usage**
 ==========
@@ -27,8 +31,9 @@ Contents
     user = User("api-key", "username")
     ....
 
-*Stats("tracker.gg-api-key")*
-#####################################################
+**Stats("tracker.gg-api-key")**
+===============================
+
 |  Gets specific information about a user(W.I.P. at the moment as I will add more functions at a later stage)
 
 | For the sake of the docs we will assign a variable to the initiation of the class like so:
@@ -40,7 +45,7 @@ Contents
 
   
 recentlyPlayed(username/id, userplatform)
-#####################################################
+#########################################
 
 | Returns 5 of your recently played legends as a list.
 
@@ -59,7 +64,7 @@ recentlyPlayed(username/id, userplatform)
     >>> ['your', 'last', 'played', 'characters']
 
 
-*matchHistory(username/id, gamecount, userplatfom)*
+matchHistory(username/id, gamecount, userplatfom)
 #####################################################
 
 | Returns data from x number of games.
@@ -80,8 +85,10 @@ recentlyPlayed(username/id, userplatform)
     >>> [{game1:legend, game1:kills, game1:duration},
     {game2:legend, game2:kills, game2:duration}]
 
-*User("tracker.gg-api-key", "username-to-look-up", "platform(optional)"*
-#####################################################
+-----------------------
+
+**User("tracker.gg-api-key", "username-to-look-up", "platform(optional)"**
+==========================================================================
 | Dumps jsons with lots of information about given user.
 
 | **username-to-look-up** - the desired username to get data from.
@@ -93,6 +100,7 @@ recentlyPlayed(username/id, userplatform)
 .. code-block:: python
     :linenos:
     apexInstance = apex.User("tracker.gg-api-key","testuser")
+
 
 games
 #####################################################
@@ -108,6 +116,7 @@ games
 
     >>> {"info about":"matches"}
 
+
 stats
 #####################################################
 
@@ -121,6 +130,8 @@ stats
     print(apexStats)
 
     >>> {"info about":"user", "rank":"gold"}
+
+-----------------------
 
 .. _FAQ:
 
@@ -173,3 +184,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+    
